@@ -1,39 +1,9 @@
 // Question# 1
-// Declare a variable called age & assign to it your age. Show
-// your age in an alert box.
-
-var age = 5;
-alert("I am" + " " + age + " " + "years old.");
-console.log("I am" + " " + age + " " + "years old.");
-
-// Question# 2
-// Declare & initialize a variable to keep track of how many
-// times a visitor has visited a web page. Show his/her
-// number of visits on your web page. For example: “You
-// have visited this site N times”.
-
-var visit_count;
-visit_count = 10;
-alert("You have visited this site" + " " + visit_count + " " + "times.");
-console.log("You have visited this site" + " " + visit_count + " " + "times.");
-
-// Question# 3
-// Declare a variable called birthYear & assign to it your
-// birth year. Show the following message in your browser:
-
-var birth_year = 2015;
-document.write("My birth year is" + " " + birth_year + "<br/>");
-document.write(
-  "Data type of my declared variable is number" + "<br/>" + "<br/>"
-);
-
-// Question# 4
 // Declare 3 variables in one statement.
 var age;
 var year;
 var date;
-
-// Question# 5
+// Question# 2
 // Declare 5 legal & 5 illegal variable names.
 // ==============================================
 // 5 Legal Variable name
@@ -50,7 +20,7 @@ var $person_name;
 // var class;  //reserved key is not being used because it has already been reserved and cannot used as variable it throws error.
 // var car*name;  //special characters cannot be used between variable but $ sign can be used.
 
-// Question# 6
+// Question# 3
 // Display this in your browser
 // a)  A heading stating “Rules for naming JS variables”
 var rules_for_JS = "Rules for naming JS variables" + "<br/>" + "<br/>";
