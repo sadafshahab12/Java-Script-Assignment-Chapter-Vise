@@ -109,7 +109,7 @@ document.write(`${table} x 10 = ${table * 10} </br> </br></br>`);
 
 document.write(`<h2>Celsius Temperature Calculation </h2>`);
 
-var fahr_temp = 70;
+var fahr_temp = 88;
 var cels_calc = (fahr_temp - 32) * (5 / 9);
 document.write(
   `${fahr_temp}<sup>0</sup>F is ${cels_calc}<sup>0</sup>C  </br></br>`
@@ -117,7 +117,7 @@ document.write(
 
 document.write(`<h2>Fahrenheit Temperature Calculation </h2>`);
 
-var cels_temp = 25;
+var cels_temp = 88;
 var fahr_calc = cels_temp * (9 / 5) + 32;
 document.write(`${cels_temp}<sup>0</sup>C is ${fahr_calc}<sup>0</sup>F </br>`);
 

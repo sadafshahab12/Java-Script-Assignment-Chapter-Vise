@@ -148,6 +148,7 @@ document.write(`selected Cities List: </br> ${selected_cities} </br> </br>`);
 // Question# 12:
 // Write a program to create a single string from the
 // below mentioned array:
+
 var arr = ["This", "is", " my", "cat"];
 // (Use array’s join method)
 var sentence = arr.join(" ");
@@ -158,19 +159,17 @@ document.write(`${sentence} </br></br>`);
 // Create a new array. Store values one by one in such a way
 // that you can access the values in the order in which they
 // were stored. (FIFO-First In First Out)
-
+document.write(`FIFO-First In First Out</br>`);
 var elec_appliances = ["Fridge", "Fan", "Room Cooler", "Ac", "Iron", "Grinder"];
-document.write(`Out: </br> ${elec_appliances[0]}</br>`);
-document.write(`Out: </br> ${elec_appliances[1]}</br>`);
-document.write(`Out: </br> ${elec_appliances[2]}</br>`);
-document.write(`Out: </br> ${elec_appliances[3]}</br>`);
-document.write(`Out: </br> ${elec_appliances[4]}</br>`);
-document.write(`Out: </br> ${elec_appliances[5]}</br></br>`);
+for (i = 0; i < elec_appliances.length; i++) {
+  document.write(`Out: </br> ${elec_appliances[i]}</br>`);
+}
 
 // Question# 14:
 // Create a new array. Store values one by one in such a way
 // that you can access the values in reverse order. (Last In
 // First Out)
+document.write(`Last In First Out</br>`);
 var fabric = [
   "Lawn",
   "Silk",
@@ -179,12 +178,9 @@ var fabric = [
   "Pluster Cotton",
   "Georgette",
 ];
-document.write(`Out: </br> ${fabric[5]}</br>`);
-document.write(`Out: </br> ${fabric[4]}</br>`);
-document.write(`Out: </br> ${fabric[3]}</br>`);
-document.write(`Out: </br> ${fabric[2]}</br>`);
-document.write(`Out: </br> ${fabric[1]}</br>`);
-document.write(`Out: </br> ${fabric[0]}</br></br>`);
+for (i = fabric.length - 1; i > 0; i--) {
+  document.write(`Out: </br> ${fabric[i]}</br>`);
+}
 
 // Question# 15:
 // Write a program to store phone manufacturers (Apple,
@@ -205,4 +201,4 @@ document.write(
         <option value="${ph_manufac[5]}">${ph_manufac[5]}</option>
       </select>
     </form>`
-  );
+);
