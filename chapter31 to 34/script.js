@@ -178,21 +178,96 @@ document.write(
   `<h1> Elapsed between the reference date and the beginning of 2015  </h1>`
 );
 function displayElapsedSeconds() {
-    // Create a Date object for the beginning of 2015
-    let referenceDate = new Date(2015, 0, 1); // January is 0-indexed
+  // Create a Date object for the beginning of 2015
+  let referenceDate = new Date(2015, 0, 1); // January is 0-indexed
 
-    // Get the current date
-    let currentDate = new Date();
+  // Get the current date
+  let currentDate = new Date();
 
-    // Calculate the difference in milliseconds
-    let differenceInMilliseconds = currentDate - referenceDate;
+  // Calculate the difference in milliseconds
+  let differenceInMilliseconds = currentDate - referenceDate;
 
-    // Convert milliseconds to seconds
-    let secondsElapsed = Math.floor(differenceInMilliseconds / 1000);
+  // Convert milliseconds to seconds
+  let secondsElapsed = Math.floor(differenceInMilliseconds / 1000);
 
-    // Display the result in the browser
-    document.write(`Seconds elapsed since the beginning of 2015: ${secondsElapsed}`) 
+  // Display the result in the browser
+  document.write(
+    `Seconds elapsed since the beginning of 2015: ${secondsElapsed}`
+  );
 }
 
 // Call the function to execute it
 displayElapsedSeconds();
+
+// Create a Date object for the current date and time.
+// Extract the hours, reset the date object an hour ahead and
+// finally display the date object in your browser.
+document.write(
+  `<h1> Date Object  </h1>`
+);
+let curDate = new Date();
+// console.log(curDate);
+let getHours = curDate.getHours();
+// console.log(getHours);
+curDate.setHours(getHours + 1);
+alert(`Update date : ${curDate}`);
+document.write(`Update date : ${curDate} <br><br>`);
+
+// Write a program that creates a date object and show the
+// date in an alert box that is reset to 100 years back?
+document.write(
+  `<h1> Date 100 Years Back </h1>`
+);
+let currenDate = new Date();
+let hundredYearsAgo = new Date(
+  currenDate.setFullYear(currenDate.getFullYear() - 100)
+);
+document.write(`100 years ago : ${hundredYearsAgo} <br><br>`);
+alert(`100 years ago : ${hundredYearsAgo}`);
+
+// Write a program to ask the user about his age. Calculate
+// and show his birth year in your browser.
+document.write(
+  `<h1> Birth Year </h1>`
+);
+let userAge = prompt("What is your age?");
+document.write(`Your Age is ${userAge} <br>`);
+let currentYear = new Date().getFullYear();
+console.log(currentYear);
+let birthYear = currentYear - userAge;
+console.log(birthYear);
+document.write(`Your Birth Year is ${birthYear} <br><br>`);
+alert(`Your Birth Year is ${birthYear}`);
+
+// Write a program to generate your K-Electric bill in your
+// browser. All the amounts should be rounded off to 2
+// decimal places. Display the following fields:
+// a. Customer Name
+// b. Current Month
+// c. Number of units
+// d. Charges per unit
+// e. Net Amount Payable (within Due Date)
+// f. Late Payment Surcharge
+// g. Gross Amount Payable (after Due Date)
+// Where,
+// Net Amount Payable (within Due Date) = Number of units * Charges per unit
+// & Gross Amount Payable (after Due Date) = Net Amount + Late Payment Surcharge
+document.write(
+  `<h1> K-Electric Bill </h1>`
+);
+let customerName = prompt("Customer Name");
+let currMonth = new Date().toLocaleString("default", { month: "long" });
+let unitConsumed = 200;
+let chargePerUnit = 50;
+let netAmountPayable = unitConsumed * chargePerUnit;
+let latePaymentSurcharge = 70;
+let grossAmountPayable = netAmountPayable + latePaymentSurcharge;
+
+document.write(`
+  Customer Name : ${customerName}<br>
+  Current Month : ${currMonth}<br>
+  Number of Units : ${unitConsumed}<br>
+  Charges Per Unit : ${chargePerUnit.toFixed(2)}<br><br>
+  Net Amount Payable (Within Due Date) : ${netAmountPayable}<br>
+  Gross Amount Payable (After Due Date) : ${grossAmountPayable.toFixed(2)}<br><br>
+  `);
